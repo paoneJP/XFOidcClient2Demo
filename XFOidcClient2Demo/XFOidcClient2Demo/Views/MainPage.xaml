@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ *  Xamarin.Forms + IdendityModel.OidcClient2 demonstration application.
+ *    Author: Takashi Yahata (@paoneJP)
+ *    Copyright: (c) 2018 Takashi Yahata
+ *    License: MIT License
+-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFOidcClient2Demo"
+             x:Class="XFOidcClient2Demo.MainPage"
+             Title="XF + OidcClient2 Demo">
+
+    <StackLayout Spacing="0" Margin="0" Padding="0">
+        <StackLayout Orientation="Horizontal" Spacing="0">
+            <Button Text="{Binding UiButtonSignin, Source={local:XamlStringResources}}"
+                    Clicked="OnSigninButtonClicked"
+                    HorizontalOptions="FillAndExpand" />
+            <Button Text="{Binding UiButtonCallApi, Source={local:XamlStringResources}}"
+                    Clicked="OnCallApiButtonClicked"
+                    HorizontalOptions="FillAndExpand" />
+            <Button Text="{Binding UiButtonSignout, Source={local:XamlStringResources}}"
+                    Clicked="OnSignoutButtonClicked"
+                    HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="0">
+            <Button Text="{Binding UiButtonShowState, Source={local:XamlStringResources}}"
+                    Clicked="OnShowAuthStateButtonClicked"
+                    HorizontalOptions="FillAndExpand" />
+            <Button Text="{Binding UiButtonTokenRefresh, Source={local:XamlStringResources}}"
+                    Clicked="OnTokenRefreshButtonClicked"
+                    HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <ScrollView Margin="5">
+            <StackLayout>
+                <Label Text="authState (Summary)" TextColor="Gray" />
+                <Label x:Name="AuthStateSummaryLabel" Text="" FontFamily="{StaticResource MonospaceFont}"
+                       TextColor="Black" Margin="15,0,5,5" LineBreakMode="CharacterWrap" />
+                <Label Text="Response" TextColor="Gray" />
+                <Label x:Name="ResultLabel" Text="" FontFamily="{StaticResource MonospaceFont}"
+                       TextColor="Black" Margin="15,0,5,5" LineBreakMode="CharacterWrap" />
+                <Label Text="authState (Full)" TextColor="Gray"/>
+                <Label x:Name="AuthStateFullLabel" Text="" FontFamily="{StaticResource MonospaceFont}"
+                       TextColor="Black" Margin="15,0,5,5" LineBreakMode="CharacterWrap" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

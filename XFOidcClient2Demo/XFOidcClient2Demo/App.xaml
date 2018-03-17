@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ *  Xamarin.Forms + IdendityModel.OidcClient2 demonstration application.
+ *    Author: Takashi Yahata (@paoneJP)
+ *    Copyright: (c) 2018 Takashi Yahata
+ *    License: MIT License
+-->
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFOidcClient2Demo.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="MonospaceFont" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Menlo" />
+                <On Platform="Android, UWP" Value="monospace" />
+            </OnPlatform>
+            <OnPlatform x:Key="PagePadding" x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0,20,0,0" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

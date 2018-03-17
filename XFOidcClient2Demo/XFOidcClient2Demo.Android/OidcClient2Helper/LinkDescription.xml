@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <assembly fullname="IdentityModel">
+    <namespace fullname="IdentityModel.Jwk" />
+  </assembly>
+  <assembly fullname="IdentityModel.OidcClient">
+    <namespace fullname="IdentityModel.OidcClient" />
+  </assembly>
+  <assembly fullname="System.IdentityModel.Tokens.Jwt">
+    <namespace fullname="System.IdentityModel.Tokens.Jwt" />
+  </assembly>
+  <assembly fullname="Newtonsoft.Json">
+    <namespace fullname="Newtonsoft.Json.Linq" />
+  </assembly>
+</linker>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ *  Xamarin.Forms + IdendityModel.OidcClient2 demonstration application.
+ *    Author: Takashi Yahata (@paoneJP)
+ *    Copyright: (c) 2018 Takashi Yahata
+ *    License: MIT License
+-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFOidcClient2Demo"
+             x:Class="XFOidcClient2Demo.LogPage"
+             Title="{Binding UiTitleLogPage, Source={local:XamlStringResources}}">
+
+    <ListView x:Name="LogListView" SeparatorVisibility="Default" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="10,0" Padding="0,10">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Timestamp, StringFormat='{0:yyyy/MM/dd HH:mm:ss.fff}'}"
+                                   TextColor="Gray" />
+                            <Label Text="{Binding Type}" TextColor="Gray" />
+                        </StackLayout>
+                        <Label Text="{Binding Message}" FontFamily="{StaticResource MonospaceFont}"
+                               TextColor="Black" Margin="5,0,0,0" LineBreakMode="CharacterWrap" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

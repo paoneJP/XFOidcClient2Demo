@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ *  Xamarin.Forms + IdendityModel.OidcClient2 demonstration application.
+ *    Author: Takashi Yahata (@paoneJP)
+ *    Copyright: (c) 2018 Takashi Yahata
+ *    License: MIT License
+-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFOidcClient2Demo"
+             x:Class="XFOidcClient2Demo.MasterDetailMenu"
+             Padding="{StaticResource PagePadding}"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             Title="{Binding UiTitleMenuPage, Source={local:XamlStringResources}}"
+             Icon="ic_menu_white.png">
+
+    <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True">
+        <ListView.Header>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill"
+                         Padding="20,50,0,20" BackgroundColor="#F0F0F0" Spacing="10">
+                <Image>
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="iOS" Value="Icon-Small-40.png" />
+                            <On Platform="Android" Value="icon.png" />
+                            <On Platform="UWP" Value="Square44x44Logo.png" />
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                <Label Text="XF + OidcClient2 Demo" VerticalTextAlignment="End" />
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding Icon}" Margin="20,10,20,10" />
+                        <Label Text="{Binding Title}" VerticalTextAlignment="Center" FontAttributes="Bold" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

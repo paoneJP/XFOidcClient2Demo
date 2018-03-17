@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ *  Xamarin.Forms + IdendityModel.OidcClient2 demonstration application.
+ *    Author: Takashi Yahata (@paoneJP)
+ *    Copyright: (c) 2018 Takashi Yahata
+ *    License: MIT License
+-->
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:XFOidcClient2Demo"
+                  x:Class="XFOidcClient2Demo.MasterDetail">
+
+    <MasterDetailPage.Master>
+        <local:MasterDetailMenu x:Name="MasterPage"/>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:MainPage />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
